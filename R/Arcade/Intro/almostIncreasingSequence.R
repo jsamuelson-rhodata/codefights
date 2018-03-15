@@ -1,10 +1,6 @@
-almostIncreasingSequence <- function(sequence) {
-  sequence <- unlist(sequence)
-  n <- length(sequence)
+almostIncreasingSequence <- function(s) {
+  s <- unlist(s)
+  n <- length(s)
   
-  if (n > 2) {
-    3 > sum(sequence[1:(n-1)] >= sequence[2:n]) + sum(sequence[1:(n-2)] >= sequence[3:n])
-  } else {
-    TRUE
-  }
+  if (n > 2) 3 > sum(s[1:(n-1)] >= s[2:n]) + sum(s[1:(n-2)] >= s[3:n]) else TRUE
 }
